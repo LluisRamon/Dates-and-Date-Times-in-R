@@ -118,12 +118,12 @@ Com he fet la presentació?
 ========================================================
 
 * [RStudio][] i [RStudio R Presentations][].
-* Script, dades i codi presentació a github.
+* [Script, dades i codi presentació a github][].
 
 ```{r}
 sessionInfo()
 ```
 
-
+[Script, dades i codi presentació a github]: https://github.com/LluisRamon/Dates-and-Date-Times-in-R
 [RStudio]: http://www.rstudio.com/
 [RStudio R Presentations]: http://www.rstudio.com/ide/docs/presentations/overview
