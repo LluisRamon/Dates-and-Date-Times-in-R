@@ -1,0 +1,129 @@
+Dates and Date-Times Classes
+========================================================
+author: Lluís Ramon
+date: 05/02/2014
+
+Barcelona R users Group
+
+Introducció
+========================================================
+
+* Motivacio
+* Diferències entre Date i Date-time
+* Converir Dates i Date-times
+* Operacions
+* Package lubridate
+* Sctipt exemple en R
+
+Motivació de la presentació
+========================================================
+
+Per les seves particularitats, les dates són complicades en general: 
+
+  * Diferents formats (5/11/13, 11-05-2013, ...)
+  * Hores, minuts, etc (2014-01-17 o 2014-01-17 14:14:32 CET)
+  * Diferents timezones (CET, CEST, ...)
+  * Diferents locals
+
+A l'R hi ha diferents classes que ho implementen, Date, POSIXct, chron, date.
+
+Diferenciar Dates i Date-time
+========================================================
+
+* Date: Represents calendar dates in R. 
+
+```{r}
+Sys.Date()
+```
+* [POSIXCT][]: Represents calendar dates and times in R.
+
+```{r}
+Sys.time()
+```
+
+
+[POSIXCT]: http://stackoverflow.com/tags/posixct/info
+
+Date-Time Classes
+========================================================
+
+### POSIXct
+
+Number of seconds since the beginning of 1970
+
+### POSIXlt
+
+Named list of vectors sec, min , hour, etc
+
+Convertint de dates a character (i viceversa)
+========================================================
+
+### Character a Date
+
+* as.Date (especificar format, accepta moltes classes)
+* strftime
+* ISOdate (character any, mes, dia per separat)
+
+
+### Date a Character
+
+* as.character 
+* format
+
+
+Operacions 
+========================================================
+
+* date + x  (x numeric)
+* date - x
+* date1 == date2
+* date1 < date2
+
+***
+
+* format
+* difftime
+* seq
+* months, weekdays, 
+
+
+Package lubridate
+========================================================
+
+Garantia Hadley Wickham
+
+_"Dates and Times Mades Easy with lubridate package"_
+
+__És útil per les següents tasques:__
+
+- Reconeixer formats de forma fàcil*
+- Extreure components d'una Date-time*
+- Calculs i operacions amb temps
+- Tractar time zones
+
+Referencies
+========================================================
+
+* [Dates and Times Mades Easy with lubridate package][]
+* [Date-Time Classes (2001)][]
+* [Date-Time Classes (2004)][]
+* [Date time cheat sheet (lubridate)][]
+
+[Dates and Times Mades Easy with lubridate package]: http://www.jstatsoft.org/v40/i03/
+[Date-Time Classes (2001)]: http://www.r-project.org/doc/Rnews/Rnews_2001-2.pdf
+[Date-Time Classes (2004)]: http://cran.r-project.org/doc/Rnews/Rnews_2004-1.pdf
+[Date time cheat sheet (lubridate)]: http://blog.yhathq.com/static/pdf/R_date_cheat_sheet.pdf
+
+Com he fet la presentació?
+========================================================
+
+* [RStudio][] i [RStudio R Presentations][].
+* Script, dades i codi presentació a github.
+
+```{r}
+sessionInfo()
+```
+
+
+[RStudio]: http://www.rstudio.com/
+[RStudio R Presentations]: http://www.rstudio.com/ide/docs/presentations/overview
