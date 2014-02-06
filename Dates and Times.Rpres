@@ -8,12 +8,14 @@ Barcelona R users Group
 Introducció
 ========================================================
 
-* Motivacio
-* Diferències entre Date i Date-time
+* Motivació
+* Diferenciar entre Date i Date-time
 * Converir Dates i Date-times
-* Operacions
+* Operacions amb Dates
 * Package lubridate
-* Sctipt exemple en R
+* [Sctipt exemple en R][]
+
+[Sctipt exemple en R]: https://github.com/LluisRamon/Dates-and-Date-Times-in-R
 
 Motivació de la presentació
 ========================================================
@@ -41,11 +43,15 @@ Sys.Date()
 Sys.time()
 ```
 
-
 [POSIXCT]: http://stackoverflow.com/tags/posixct/info
 
-Date-Time Classes
+Classes
 ========================================================
+
+
+### Date
+
+Number of days since 1970-01-01
 
 ### POSIXct
 
@@ -55,7 +61,7 @@ Number of seconds since the beginning of 1970
 
 Named list of vectors sec, min , hour, etc
 
-Convertint de dates a character (i viceversa)
+Conversió a Dates
 ========================================================
 
 ### Character a Date
@@ -105,13 +111,13 @@ Referencies
 ========================================================
 
 * [Dates and Times Mades Easy with lubridate package][]
-* [Date-Time Classes (2001)][]
-* [Date-Time Classes (2004)][]
+* [Date-Time Classes (Rnews 2001)][]
+* [Date-Time Classes (Rnews 2004)][]
 * [Date time cheat sheet (lubridate)][]
 
 [Dates and Times Mades Easy with lubridate package]: http://www.jstatsoft.org/v40/i03/
-[Date-Time Classes (2001)]: http://www.r-project.org/doc/Rnews/Rnews_2001-2.pdf
-[Date-Time Classes (2004)]: http://cran.r-project.org/doc/Rnews/Rnews_2004-1.pdf
+[Date-Time Classes (Rnews 2001)]: http://www.r-project.org/doc/Rnews/Rnews_2001-2.pdf
+[Date-Time Classes (Rnews 2004)]: http://cran.r-project.org/doc/Rnews/Rnews_2004-1.pdf
 [Date time cheat sheet (lubridate)]: http://blog.yhathq.com/static/pdf/R_date_cheat_sheet.pdf
 
 Com he fet la presentació?
@@ -123,6 +129,7 @@ Com he fet la presentació?
 ```{r}
 sessionInfo()
 ```
+
 
 [Script, dades i codi presentació a github]: https://github.com/LluisRamon/Dates-and-Date-Times-in-R
 [RStudio]: http://www.rstudio.com/

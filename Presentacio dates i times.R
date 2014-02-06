@@ -35,6 +35,7 @@ format(rugbcn$reunio)
 is(format(rugbcn$reunio))
 as.character(rugbcn$reunio)
 
+# Classes que pot convertir as.Date
 methods(as.Date)
 
 # Operacions amb dates
@@ -46,16 +47,18 @@ rugbcn$reunio - rugbcn$inici
 rugbcn$reunio > rugbcn$inici
 
 months(rugbcn$reunio)
+months(rugbcn$reunio, abbreviate = TRUE)
 weekdays(rugbcn$reunio)
 quarters(rugbcn$reunio)
 
-months(rugbcn$reunio, abbreviate = TRUE)
+Sys.getlocale() # depen del local
 
 # Crar variables any, mes,... Per agregar informacio
 format(rugbcn$reunio, format = "%Y")
 format(rugbcn$reunio, format = "%m")
 
 # Crear sequencia de Dates camp by
+?seq.Date
 seq(rugbcn$inici[1], rugbcn$reunio[1], by =  "day")
 seq(rugbcn$inici[1], rugbcn$reunio[1], by =  "week")
 
@@ -147,3 +150,19 @@ leap_year(rugbcn$aniversari)
 # Qualsevol format de data. Inclus formats diferents en un mateix vector.
 parse_date_time("1979L05L27", c("dmy", "dym", "mdy", "myd", "ydm", "ymd"))
 parse_date_time(c("11-oct-2011", "2011-11-03",  "25/11/1989"), c("dmy", "dym", "mdy", "myd", "ydm", "ymd"))
+
+# Afefgeixo petició de l'Aleix sumar un periode (dies, mesos ..) a una data
+jan <- ymd_hms("2010-01-15 03:04:05")
+
+jan + dseconds(1)
+jan + dminutes(5.5)
+jan + dhours(4)
+jan + ddays(3)
+jan + dweeks(9)
+# No existeix dmonths. Cada mes té diferent nombre dies i per tant segons
+jan + dyears(9)
+
+# Afefgeixo petició del Cristian sobre sumar sis mesos i quedarte amb el 
+# darrer dia del mes 
+jan <- ymd("2010-01-15")
+rollback(jan %m+% months(7))
